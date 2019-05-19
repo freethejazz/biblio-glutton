@@ -20,7 +20,7 @@ public class LookupConfiguration extends Configuration {
 
     private Elastic elastic;
 
-    private String grobidPath;
+    private String grobidURL;
 
     @Valid
     @NotNull
@@ -89,12 +89,12 @@ public class LookupConfiguration extends Configuration {
         this.maxAcceptedRequests = maxAcceptedRequests;
     }
 
-    public String getGrobidPath() {
-        return grobidPath;
+    public String getGrobidURL() {
+        return grobidURL;
     }
 
-    public void setGrobidPath(String grobidPath) {
-        this.grobidPath = grobidPath;
+    public void setGrobidURL(String grobidURL) {
+        this.grobidURL = grobidURL;
     }
 
     public class Source {

@@ -10,9 +10,6 @@ import com.scienceminer.lookup.exception.ServiceException;
 import com.scienceminer.lookup.storage.LookupEngine;
 import com.scienceminer.lookup.storage.StorageEnvFactory;
 import com.scienceminer.lookup.utils.grobid.GrobidClient;
-import io.dropwizard.client.HttpClientBuilder;
-import io.dropwizard.setup.Environment;
-import org.apache.http.client.HttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +51,7 @@ public class LookupController {
         this.configuration = configuration;
         this.storageEnvFactory = storageEnvFactory;
         this.lookupEngine = new LookupEngine(storageEnvFactory);
-        this.lookupEngine.setGrobidClient(new GrobidClient(configuration.getGrobidPath()));
+        this.lookupEngine.setGrobidClient(new GrobidClient(configuration.getGrobidURL()));
     }
 
     @GET
